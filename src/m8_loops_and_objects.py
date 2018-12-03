@@ -6,8 +6,8 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Emily Guajardo.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -16,6 +16,10 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
+    print_sequence1()
+    draw_circles1()
+    print_sequence2()
+    print_sequence3()
 
 def print_sequence1():
     """
@@ -29,7 +33,7 @@ def print_sequence1():
        200
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # Done: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -37,6 +41,11 @@ def print_sequence1():
     print('--------------------------------------------------')
     print('Running print_sequence1:')
     print('--------------------------------------------------')
+    x = 0
+    print (x)
+    for i in range (20):
+        x = x + 10
+        print (x)
 
 
 def draw_circles1():
@@ -48,7 +57,7 @@ def draw_circles1():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
@@ -58,6 +67,17 @@ def draw_circles1():
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
 
+    window = rg.RoseWindow(400,400)
+    x = 0
+    for i in range (21):
+        center_point = rg.Point(200, 200)
+        radius = x
+        circle = rg.Circle(center_point, radius)
+        circle.attach_to(window)
+        x = x + 10
+
+    window.render()
+    window.close_on_mouse_click()
 
 def print_sequence2():
     """
@@ -71,7 +91,7 @@ def print_sequence2():
       390.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # Done: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -79,6 +99,12 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
+
+    x = 50
+    print (x)
+    for i in range (17):
+        x = x + 20
+        print (x)
 
 
 def draw_circles2():
@@ -113,7 +139,7 @@ def print_sequence3():
       100.
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement this function, per its doc-string above.
+    # Done: 6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
@@ -122,6 +148,10 @@ def print_sequence3():
     print('Running print_sequence3:')
     print('--------------------------------------------------')
 
+    x = 0
+    for i in range (100):
+        x = x + 1
+        print (x)
 
 def draw_circles3():
     """
