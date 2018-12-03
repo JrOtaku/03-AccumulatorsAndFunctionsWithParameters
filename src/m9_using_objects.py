@@ -181,6 +181,7 @@ def lines():
     print(line2.get_midpoint().y)
 
     window.render
+    window.close_on_mouse_click()
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
